@@ -2,8 +2,7 @@
 
 The purpose of this repo is to build and publish a Docker image to run new versions of mesos-dns. [The official Docker image](https://hub.docker.com/r/mesosphere/mesos-dns/) is outdated and no longer works with newer versions of Mesos.
 
-The bin/mesos-dns file was downloaded from:
-https://github.com/mesosphere/mesos-dns/releases/download/v0.4.0/mesos-dns-v0.4.0-linux-amd64.gz
+This image is available on [Docker Hub](https://hub.docker.com/r/sebastianseilund/mesos-dns/).
 
 
 ## Usage
@@ -13,6 +12,7 @@ Run the container and mount the mesos-dns config.json file at `/config.json`.
 `docker run` example:
 
 ```sh
+docker pull sebastianseilund/mesos-dns
 docker run -v /path/to/config.json:/config.json sebastianseilund/mesos-dns  
 ```
 
